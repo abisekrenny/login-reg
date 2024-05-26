@@ -66,3 +66,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* In your CSS file (e.g., index.css) 
+html,
+body,
+#root {
+  height: 100%;
+}*/
