@@ -6,6 +6,7 @@ import { Login } from "./Login";
 import { Register } from "./Register";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 function App() {
   const [currentform, setCurrentForm] = useState("login");
 
@@ -14,8 +15,8 @@ function App() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row align-items-center justify-content-between">
+    /*<div className="container-fluid">*/
+      <div className="main-wrapper">
         <div className="col">
           {currentform === "login" ? (
             <Login onFormSwitch={toggleForm} />
@@ -27,7 +28,7 @@ function App() {
           <img src="30a38887b0559dfb619dc9eba940a887.jpeg" alt="" />
         </div>
       </div>
-    </div>
+    /*</div>*/
   );
 }
 

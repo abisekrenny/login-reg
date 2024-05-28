@@ -1,41 +1,45 @@
 .register-form {
-  display: flex;
-  flex-direction: column;
-  width: fixed(388px);
-  height: hug(765px);
-  gap: 48px;
+ 
+  
+  /* width: fixed(388px);
+  height: hug(765px); */
+ 
 }
 
 label {
   text-align: left;
-  padding: 0.25rem 0;
+  padding: 1rem 0;
 }
 
 input {
-  margin: -2rem 0;
+  
   padding: 1rem;
   border: none;
   border-radius: 10px;
+  width: 100%;
 }
 
 button {
   border: none;
-  background-color: rgb(229, 48, 48);
+  margin-top: px;
   padding: 20px;
   border-radius: 10px;
+  width: 100%;
   cursor: pointer;
-  color: #3044db;
+  color: white;
+  
 }
 
 .link-btn {
+  
   background: none;
-  color: rgb(68, 195, 26);
+  color: black;
   text-decoration: underline;
+  margin: 10px;
 }
 
 img {
-  width: 816px;
-  height: 1076px;
+  width: 100%;
   padding-top: 5px;
   padding-bottom: 3px;
   border: 1px;
