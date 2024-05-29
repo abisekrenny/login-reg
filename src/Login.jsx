@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 
+
 export const Login = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setpass] = useState("");
@@ -11,6 +12,8 @@ export const Login = (props) => {
   };
 
   return (
+    <>
+    
     <div className="auth-form-container">
       <h2>Welcome Back</h2>
       <br/>
@@ -53,5 +56,6 @@ export const Login = (props) => {
         Don't have an account? Register here.
       </button>
     </div>
+    </>
   );
 };
