@@ -5,10 +5,17 @@ import "./Login.css";
 export const Login = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setpass] = useState("");
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
+    // console.log(email);
+  const storedUser = JSON.parse(localStorage.getItem('user'));
+  if (storedUser && storedUser.email === email && storedUser.pass === pass){
+    alert('Login Sucessful!');
+  }else{
+    alert('Invalid email or Password');
+  }
   };
 
   return (
@@ -59,3 +66,5 @@ export const Login = (props) => {
     </>
   );
 };
+
+export default Login;

@@ -7,7 +7,9 @@ export const Register = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-      localStorage.setItem(email, pass)
+    //   localStorage.setItem(email, pass)
+      localStorage.setItem('user', JSON.stringify({ email, pass }));
+    alert('Registered successfully!');
   };
   function ShowUser() {
    var X = localStorage.getItem(email)
@@ -59,6 +61,8 @@ export const Register = (props) => {
   );
 };
 export default localStorage;
+
+
 
 // import React, { useState } from "react";
 
