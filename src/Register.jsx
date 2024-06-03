@@ -7,9 +7,7 @@ export const Register = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //   localStorage.setItem(email, pass)
-      localStorage.setItem('user', JSON.stringify({ email, pass }));
-    alert('Registered successfully!');
+      localStorage.setItem(email, pass)
   };
   function ShowUser() {
    var X = localStorage.getItem(email)
@@ -63,58 +61,5 @@ export const Register = (props) => {
 export default localStorage;
 
 
-
-// import React, { useState } from "react";
-
-// export const Register = (props) => {
-//     const [email, setEmail] = useState('');
-//     const [pass, setPass] = useState('');
-//     const [name, setName] = useState('');
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-
-//         try {
-//             const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-//                 method: 'POST',
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                 },
-//                 body: JSON.stringify({
-//                     name,
-//                     email,
-//                     password: pass,
-//                 }),
-//             });
-
-//             if (response.ok) {
-//                 // Registration successful, handle token (if provided)
-//                 // Redirect to landing page or other route
-//                 console.log('Registration successful!');
-//                 props.onFormSwitch('login'); // Redirect to login page
-//             } else {
-//                 console.error('Registration failed');
-//             }
-//         } catch (error) {
-//             console.error('Error during registration:', error);
-//         }
-//     };
-
-//     return (
-//         <div className="auth-form-container">
-//             <h2>Register</h2>
-//             <form className="register-form" onSubmit={handleSubmit}>
-//                 <label>Full name</label>
-//                 <input value={name} name="name" placeholder="Full Name" onChange={(e) => setName(e.target.value)} />
-//                 <label>Email</label>
-//                 <input value={email} type="email" placeholder="youremail@gmail.com" onChange={(e) => setEmail(e.target.value)} />
-//                 <label>Password</label>
-//                 <input value={pass} type="password" placeholder="At least 8 Characters" onChange={(e) => setPass(e.target.value)} />
-//                 <button type="submit">Register</button>
-//             </form>
-//             <button className="link-btn" onClick={() => props.onFormSwitch('login')}>
-//                 Already have an account? Login here.
-//             </button>
-//         </div>
-//     );
-// };
+// localStorage.setItem( 'user',JSON.stringify({ email, pass }));
+// alert('Registered successfully!');

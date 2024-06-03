@@ -5,8 +5,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
-// import { Testing } from "./Testing";
-
 function App() {
   const [currentform, setCurrentForm] = useState("login");
 
@@ -16,28 +14,26 @@ function App() {
 
   return (
     <>
-   <BrowserRouter>
-   <Routes>
-    {/* <Route path="/welcome" element={Welcome } /> */}
-    <Route path="/" element={Login  } />
-    <Route path="/register" element={Register } />
-   </Routes>
-   </BrowserRouter>
-    <div className="container-fluid">
-      {/* <Testing /> */}
-      <div className="main-wrapper">
-        <div className="col">
-          {currentform === "login" ? (
-            <Login onFormSwitch={toggleForm} />
-          ) : (
-            <Register onFormSwitch={toggleForm} />
-          )}
-        </div>
-        <div className="col img-bg">
-          <img src="30a38887b0559dfb619dc9eba940a887.jpeg" alt="" />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={Login} />
+          <Route path="/register" element={Register} />
+        </Routes>
+      </BrowserRouter>
+      <div className="container-fluid">
+        <div className="main-wrapper">
+          <div className="col">
+            {currentform === "login" ? (
+              <Login onFormSwitch={toggleForm} />
+            ) : (
+              <Register onFormSwitch={toggleForm} />
+            )}
+          </div>
+          <div className="col img-bg">
+            <img src="30a38887b0559dfb619dc9eba940a887.jpeg" alt="" />
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 }
