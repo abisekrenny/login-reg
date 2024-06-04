@@ -42,6 +42,8 @@ button {
   margin-bottom: 1rem !important;
 }
 
+
+
 .forgot-pwd-control {
   text-align: right;
 }
@@ -78,4 +80,8 @@ button {
 
 .sign-in-facebook-control button {
   background-color: #f7fbff;
+}
+
+button.link-btn {
+  color: white;
 }
